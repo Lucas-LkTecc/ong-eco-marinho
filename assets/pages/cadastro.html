@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="pt-br">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doação</title>
+    <title>Cadastro</title>
 </head>
 <body>
-    <header>
+   <header>
         <div class="container">
             <a href="#" class="logo">
                 <img src="/assets/images/logo.png" alt="Logo da página">
@@ -23,64 +23,47 @@
         </div>
         <section class="hero-section">
             <div class="container hero-content">
-                <img src="/assets/images/blog/header.jpg" alt="foto de arraias no oceano">
+                <img src="/assets/images/cadastro/header-cadastro.jpg" alt="foto tartaruga">
                 <div class="text-content">
-                    <h1>Sua doação 
-                        transforma o oceano.
-                    </h1>
+                    <h1>Seja um Voluntário 💚</h1>
                     <p>
-                       Cada real doado é investido diretamente em nossos projetos de limpeza, resgate de animais e educação. Faça parte da solução e ajude-nos a proteger a vida marinha.
+                        Nosso projeto depende da força e da dedicação de pessoas como você.  
+                        Ao se tornar voluntário, você contribui com seu tempo, talento e energia  
+                        para causas que realmente fazem a diferença.  
+                        Preencha o formulário abaixo e venha fazer parte dessa missão!
                     </p>
                 </div>
             </div>
         </section>
     </header>
+    <section class="form-voluntario">
+        <form action="#" method="post" class="form-voluntario">
+            <label for="nome">Nome completo:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
 
-    <section class="escolha-doar">
-        <div>
-            <button><a href="#">Doação Única <img src="/assets/images/icons/arrow.png" alt="botão de doação"></a></button>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
 
-            <button><a href="#">Doação Mensal (Seja um Guardião!)</a></button>
-
-            <p>
-                Ao se tornar um(a) Guardião(ã) do Mar, você nos dá a previsibilidade necessária para planejar resgates e expedições de limpeza a longo prazo. É a forma de maior impacto!
-            </p>
-        </div>
-    </section>
-
-    <section class="doacao">
-        <h2>Escolha o valor do seu impacto</h2>
-
-        <button class="valores">R$ 30</button>
-        <button class="valores">R$ 60</button>
-        <button class="valores">R$ 120</button>
-        <button class="valores">Outros valores</button>
-
-        <form action="processa_formulario.js" method="post">
-            <!-- Campo de texto -->
-            <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nome" placeholder="Digite seu nome: " required>
-
-            <!-- Campo de e-mail -->
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="Digite seu E-mail" required>
-
-            <!-- Campo para CPF/CNPJ -->
             <label for="cpfCnpj">CPF ou CNPJ:</label>
-            <input type="text" name="cpfCnpj" id="cpfCnpj" placeholder="Digite seu CPF ou CNPJ: ">
+            <input type="text" id="cpfCnpj" name="cpfCnpj" placeholder="Digite seu CPF ou CNPJ" required>
 
-            <!-- Opções de forma de pagamento -->
-            <label for="pagamento">Formas de Pagamento</label>
-            <select name="pagamento" id="pagamento">
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(xx) xxxxx-xxxx" required>
+
+            <label for="area">Área de interesse:</label>
+            <select id="area" name="area" required>
                 <option value="">Selecione</option>
-                <option value="pix">Pix</option>
-                <option value="Cartao">Cartão de crédito</option>
-                <option value="boleto">Boleto</option>
+                <option value="educacao">Educação</option>
+                <option value="meio-ambiente">Meio Ambiente</option>
+                <option value="saude">Saúde</option>
+                <option value="animais">Proteção Animal</option>
+                <option value="outros">Outros</option>
             </select>
-                
-            <!-- Botões -->
-            <button type="submit">Concluir Doação</button>
-            <button type="reset">Limpar formulario</button>
+
+            <label for="mensagem">Por que deseja ser voluntário?</label>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte um pouco sobre sua motivação..."></textarea>
+
+            <button type="submit">Quero ser voluntário!</button>
         </form>
     </section>
 

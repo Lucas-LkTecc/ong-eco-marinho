@@ -3,94 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
     <title>EcoMarinho</title>
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="container">
             <img src="/assets/images/logo.png" alt="Logo da eco Marinha">
             
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#sobre">Sobre </a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#doacoes">Doações</a></li>
-                <li><a href="#cadastro">Cadastro</a></li>
+                <li><a href="/assets/pages/index.html">Home</a></li>
+                <li><a href="/assets/pages/blog.html">Blog</a></li>
+                <li><a href="/assets/pages/sobre.html">Sobre </a></li>
+                <li><a href="/assets/pages/projetos.html">Projetos</a></li>
+                <li><a href="/assets/pages/doacoes.html" class="btn">Doações</a></li>
+                <li><a href="/assets/pages/cadastro.html">Cadastro</a></li>
             </ul>
-            
         </nav>
     </header>
-    <div class="hero-section">
-        <img src="/assets/images/tataruga.png" alt="Tartaruga-marinha">
-        <h1>Devolvendo a vida ao oceano, uma onda de cada vez.Devolvendo a vida ao oceano, uma onda de cada vez.</h1>
-    </div>
 
-    <div class="conquistas-da-organizacao">
-        <p>
-            + de 50 Toneladas de Plástico Removidas 
-            Do oceano e de nossas costas. Isso equivale ao peso de 8 elefantes-africanos em lixo que não está mais ameaçando a vida marinha.
-        </p>
-        <p>
-            + de 200 km de Litoral Limpo Em mutirões com voluntários, devolvemos a praias e manguezais sua beleza natural, tornando-os seguros para animais e pessoas.
-        </p>
-        <p>
-            + de 1.200 Animais Marinhos Resgatados Graças às nossas equipes de reabilitação, tartarugas, aves marinhas e outros animais receberam uma segunda chance de voltar para casa.
-        </p>
-        <p>
-            + de 15.000 Pessoas Engajadas Entre voluntários, estudantes e seguidores, criamos uma comunidade vibrante que luta ativamente pela saúde dos nossos oceanos.
-        </p>
-    </div>
+    <main>
+        <section class="hero-section container">
+            <div class="hero-text">
+                <h1>Devolvendo a vida ao oceano, uma onda de cada vez. Devolvendo a vida ao oceano, uma onda de cada vez.</h1>
+            </div>
 
-    <div class="missao-visao-valores">
-        <h2>Missão, Visão e Valores</h2>
+            <div class="hero-image">
+                <img src="/assets/images/main/tataruga.png" alt="Tartaruga-marinha em aquarela">
+            </div>
 
-        <img src="/assets/images/missao.jpg" alt="missao">
-        <img src="/assets/images/visao.jpg" alt="visao">
-        <img src="/assets/images/valores.jpg" alt="valores">
+            <div class="conquistas-list">
+                <div class="conquista-item">
+                    <p><strong>+ de 50 Toneladas de Plástico Removidas</strong><br>Do oceano e de nossas costas. Isso equivale ao peso de 8 elefantes-africanos.</p>
+                </div>
+                <div class="conquista-item">
+                    <p><strong>+ de 200 km de Litoral Limpo</strong><br>Em mutirões com voluntários, devolvemos a praias e manguezais sua beleza natural.</p>
+                </div>
+                <div class="conquista-item">
+                    <p><strong>+ de 1.200 Animais Marinhos Resgatados</strong><br>Graças às nossas equipes de reabilitação, tartarugas e outros animais receberam uma segunda chance.</p>
+                </div>
+                <div class="conquista-item">
+                    <p><strong>+ de 15.000 Pessoas Engajadas</strong><br>Entre voluntários, estudantes e seguidores, criamos uma comunidade vibrante.</p>
+                </div>
+            </div>
+        </section>
 
-        <p class="missao">
-            Promover a regeneração dos ecossistemas marinhos, mobilizando pessoas e recursos para limpar nossos oceanos, resgatar e reabilitar a vida selvagem e educar a sociedade sobre a importância de um planeta azul e saudável.
-        </p>
-        <p class="visao">
-            Ser uma referência global na luta pela despoluição dos oceanos, transformando a relação da sociedade com o mar e contribuindo para a recuperação integral da biodiversidade marinha para as futuras gerações.
-        </p>
-        <p class="valores">
-            Na EcoMarinho, nosso compromisso com a vida guia cada passo. Agimos com transparência e urgência, acreditando no poder da educação para inspirar a mudança. Através da colaboração, unimos pessoas para garantir a proteção e o futuro dos nossos oceanos.
-        </p>
-    </div>
-    <div class="quem-faz-acontecer">
-        <h2>Quem Faz Acontecer</h2>
+        <section class="missao-visao-valores container">
+            <h2>Missão, Visão e Valores</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="/assets/images/main/missao.jpg" alt="Vida marinha em um coral">
+                    <div class="card-text">
+                        <h3>Missão</h3>
+                        <p>Promover a regeneração dos ecossistemas marinhos, mobilizando pessoas e recursos para limpar nossos oceanos, resgatar e reabilitar a vida selvagem e educar a sociedade sobre a importância de um planeta azul e saudável.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/assets/images/main/visao.jpg" alt="Mergulhador com tubarões">
+                    <div class="card-text">
+                        <h3>Visão</h3>
+                        <p>Ser uma referência global na luta pela despoluição dos oceanos, transformando a relação da sociedade com o mar e contribuindo para a recuperação integral da biodiversidade marinha para as futuras gerações.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/assets/images/main/valores.jpg" alt="Mergulhador com Tartaruga-marinha">
+                    <div class="card-text">
+                        <h3>Valores</h3>
+                        <p>
+                            Na EcoMarinho, nosso compromisso com a vida guia cada passo. Agimos com transparência e urgência, acreditando no poder da educação para inspirar a mudança. Através da colaboração, unimos pessoas para garantir a proteção e o futuro dos nossos oceanos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="quem-faz-acontecer container">
+            <div class="quem-faz-acontecer-image">
+                <img src="/assets/images/main/equipe2.jpg" alt="Equipe da EcoMarinho em um barco">
+            </div>
+            <div class="quem-faz-acontecer-text">
+                <h2>Quem Faz Acontecer</h2>
+                <p> 
+                    A EcoMarinho é composta por uma equipe multidisciplinar de especialistas, incluindo biólogos, ambientalistas e comunicadores, que garantem a base científica e estratégica de cada projeto.
+                    Nossa estrutura é ágil e focada em resultados. Atuamos em frentes de limpeza, reabilitação de animais e educação, garantindo que os recursos sejam aplicados diretamente onde são mais necessários. O pilar do nosso trabalho em campo é uma rede dedicada de voluntários, que doam seu tempo e energia para a causa.
+                    Somos um time unido pela paixão e guiado pela ciência, totalmente comprometido com a missão de devolver a vida aos nossos oceanos.
+                </p>
+            </div>
+        </section>
+    </main>
 
-        <p>
-            A EcoMarinho é composta por uma equipe multidisciplinar de especialistas, incluindo biólogos, ambientalistas e comunicadores, que garantem a base científica e estratégica de cada projeto.
-            Nossa estrutura é ágil e focada em resultados. Atuamos em frentes de limpeza, reabilitação de animais e educação, garantindo que os recursos sejam aplicados diretamente onde são mais necessários. O pilar do nosso trabalho em campo é uma rede dedicada de voluntários, que doam seu tempo e energia para a causa.
-            Somos um time unido pela paixão e guiado pela ciência, totalmente comprometido com a missão de devolver a vida aos nossos oceanos.
-        </p>
-
-    </div>
     <footer>
-        <img src="/assets/images/logo.png" alt="Logo da EcoMarinho">
-        <ol>
-            <li>EcoMarinho</li>
-            <li>Junte-se á maré da mudança.</li>
-        </ol>
-        <ol>PARTICIPE
-            <li>Seja voluntario</li>
-            <li>Empresas Parceiras</li>
-            <li>Evento e Multirões</li>
-            <li>Blog e Noticias</li>
-        </ol>
-        <ol>SOBRE NÓS
-            <li>Nossa Missão, Visão e Valores</li>
-            <li>Nossa equipe</li>
-            <li>Transparencia</li>
-            <li>Contato</li>
-        </ol>
-        <p>
-            © 2025 EcoMarinho | Todos os direitos reservados.CNPJ: XX.XXX.XXX/0001-XX[Política de Privacidade] | [Termos de Uso]+
+        <div class="footer-container container">
+            <div class="footer-col" id="footer-logo">
+                <img src="/assets/images/logo.png" alt="Logo EcoMarinho">
+                <p>Evoluindo junto com a maré da mudança.</p>
+            </div>
 
-        </p>
+            <div class="footer-col">
+                <h3>PARTICIPE</h3>
+                <ul>
+                    <li><a href="#">Seja voluntário</a></li>
+                    <li><a href="#">Empresas Parceiras</a></li>
+                    <li><a href="#">Eventos e Mutirões</a></li>
+                    <li><a href="#">Blog e Notícias</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>SOBRE NÓS</h3>
+                <ul>
+                    <li><a href="#">Nossa Missão, Visão e Valores</a></li>
+                    <li><a href="#">Nossa equipe</a></li>
+                    <li><a href="#">Transparência</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 EcoMarinho | Todos os direitos reservados. | Política de Privacidade | Termos de Uso</p>
+        </div>
     </footer>
 </body>
 </html>

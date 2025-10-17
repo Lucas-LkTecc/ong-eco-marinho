@@ -1,3 +1,58 @@
 /* --- CSS RESET E VARIÁVEIS GLOBAIS --- */
 
 /* Reset básico para remover estilos padrão do navegador */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variaveis de Cor - Facilita a manutenção do designe */
+:root {
+    --primary-blue: #003b73;
+    --secondary-blue: #0099cc;
+    --dark-text: #343A40;
+    --light-text: #F8FAFC;
+    --background-light: #F8F9FA;
+    --gray-text: #64748B;
+}
+
+/* Estilos globais do corpo da página */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background-light);
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+/* Classe de container para centralizar conteúdo e manter margens consistentes */
+.container {
+    width: 90%;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--primary-blue);
+}
+
+h1 {
+    font-size: 3rem; /* 48px */
+}
+
+h2 {
+    font-size: 2.25rem; /* 36px */
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit; /* Herda a cor do elemento pai */
+}
+
+ul {
+    list-style: none;
+}

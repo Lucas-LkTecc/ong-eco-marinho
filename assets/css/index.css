@@ -1,0 +1,280 @@
+/* --- ESTILOS DA PÁGINA INDEX --- */
+
+/* --- Cabeçalho --- */
+header {
+    background-color: var(--primary-blue);
+    color: var(--light-text);
+    padding: auto 0;
+    border-radius: 100px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    margin: 25px ;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    max-width: 75px;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+header nav ul a {
+    transition: color 0.3s ease;
+}
+
+header nav ul a:hover {
+    color: var(--secondary-blue);
+}
+
+/* Estilo do botão "Doações" */
+.btn {
+    background-color: var(--secondary-blue);
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: bolder;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #2563EB;
+    color: var(--light-text);
+}
+
+/* --- Seção Hero --- */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 0;
+    gap: 2rem;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: right;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --- Seção Conquistas --- */
+.conquistas {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 4rem 0;
+}
+
+.conquistas-image {
+    flex: 1;
+}
+
+.conquistas-image img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.conquistas-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+    padding-left: 2rem;
+}
+
+/* Linha vertical da timeline */
+.conquistas-list::before {
+    content: '';
+    position: absolute;
+    left: 11px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background-color: var(--secondary-blue);
+}
+
+.conquista-item {
+    position: relative;
+}
+
+/* Círculo da timeline */
+.conquista-item::before {
+    content: '';
+    position: absolute;
+    left: -2rem;
+    top: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--secondary-blue);
+    border: 2px solid var(--background-light);
+}
+
+.conquista-item p {
+    color: var(--gray-text);
+}
+
+.conquista-item strong {
+    color: var(--dark-text);
+    font-size: 1.1rem;
+}
+
+/* --- Seção Missão, Visão e Valores --- */
+.missao-visao-valores {
+    padding: 4rem 0;
+    background-color: var(--background-light);
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;  /* Garante que a imagem não vaze das bordas arredondadas */ 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem cobrir todo o espaço do card */
+    display: block;
+}
+
+.card-text h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* --- Seção Quem Faz Acontecer --- */
+.quem-faz-acontecer {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 4rem 0;
+}
+
+.quem-faz-acontecer-image {
+    flex: 1;
+}
+
+.quem-faz-acontecer-image img {
+    width: 100%;
+    border-radius: 10%;
+}
+
+.quem-faz-acontecer-text {
+    flex: 1;
+}
+
+.quem-faz-acontecer-text h2 {
+    text-align: center;
+}
+
+/* --- Rodapé --- */
+footer {
+    background-color: var(--primary-blue);
+    color: var(--light-text);
+    padding-top: 3rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-bottom: 3rem;
+}
+
+.footer-col {
+    flex: 1;
+}
+
+#footer-logo p {
+    margin-top: 1rem;
+    color: #A0AEC0;
+}
+
+.footer-col h3 {
+    margin-bottom: 1rem;
+}
+
+.footer-col ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-col a {
+    color: #A0AEC0;
+    transition: color 0.3s ease;
+}
+.footer-col a:hover {
+    color: var(--light-text);
+}
+
+.footer-bottom {
+    border-top: 1px solid #1E293B;
+    text-align: center;
+    padding: 0.5rem 0;
+    font-size: 0.875rem;
+    color: #A0AEC0;
+}
+
+/* ------------------------------------------------- */
+/* --- RESPONSIVIDADE (Mobile-First approach) --- */
+/* ------------------------------------------------- */
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.25rem; }
+    h2 { font-size: 1.75rem; }
+
+    /* Esconder o menu de navegação (preparação para um menu hambúrguer) */
+    header nav ul {
+        display: none;
+    }
+
+    .hero-section, .conquistas, .quem-faz-acontecer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        order: 2; /* Texto aparece depois da imagem no mobile */
+    }
+
+    .hero-image {
+        order: 1;
+        text-align: center;
+    }
+
+    .quem-faz-acontecer-text h2 {
+        text-align: center;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}

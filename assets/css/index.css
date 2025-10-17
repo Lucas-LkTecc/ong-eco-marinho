@@ -149,21 +149,46 @@ header nav ul a:hover {
 }
 
 .card {
-    position: relative;
+    position: relative; /* Essencial para posicionar o box de texto por cima */
     border-radius: 15px;
-    overflow: hidden;  /* Garante que a imagem não vaze das bordas arredondadas */ 
+    overflow: hidden; /* Garante que tudo (imagem e overlay) fique dentro das bordas arredondadas */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    height: 450px; /* Altura fixa para os cards ficarem uniformes. Ajuste se necessário */
 }
 
 .card img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Faz a imagem cobrir todo o espaço do card */
+    object-fit: cover; /* Faz a imagem cobrir o card inteiro sem distorcer */
     display: block;
+    transition: transform 0.4s ease; /* Efeito de transição suave para o hover */
 }
 
-.card-text h3 {
-    margin-bottom: 0.5rem;
+.card:hover img {
+    transform: scale(1.05); /* Efeito de zoom sutil ao passar o mouse */
+}
+
+.card-overlay {
+    position: absolute; /* Tira o elemento do fluxo normal e o posiciona em relação ao .card */
+    bottom: 20px; /* Distância da borda inferior */
+    left: 20px;   /* Distância da borda esquerda */
+    right: 20px;  /* Distância da borda direita */
+
+    /* O estilo do box azul semitransparente */
+    background-color: rgba(10, 34, 64, 0.85); /* Usando a cor --primary-blue com 85% de opacidade */
+    color: var(--light-text);
+    padding: 1.5rem;
+    border-radius: 10px; /* Bordas arredondadas para o box interno */
+
+    /* Efeito de "vidro fosco" (opcional, mas muito moderno) */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px); /* Suporte para Safari */
+}
+
+.card-overlay p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0; /* Remove qualquer margem padrão do parágrafo */
 }
 
 /* --- Seção Quem Faz Acontecer --- */
@@ -179,8 +204,9 @@ header nav ul a:hover {
 }
 
 .quem-faz-acontecer-image img {
-    width: 100%;
-    border-radius: 10%;
+    width: 450px;
+    height: 450px;
+    border-radius: 100% 100% 0 0 ;
 }
 
 .quem-faz-acontecer-text {
@@ -276,5 +302,9 @@ footer {
     .footer-container {
         flex-direction: column;
         text-align: center;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr; /* Um card por linha em telas menores */
     }
 }

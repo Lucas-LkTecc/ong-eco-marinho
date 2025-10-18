@@ -3,99 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos</title>
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/projetos.css">
+    <link rel="shortcut icon" href="/assets/images/favicon-32x32.png" type="image/x-icon">
+    <title>EcoMarinho - Projetos</title>
 </head>
 <body>
     <header>
-        <div class="container">
-            <a href="#" class="logo">
-                <img src="/assets/images/logo.png" alt="Logo da página">
+        <nav class="container">
+            <a href="index.html">
+                <img src="/assets/images/logo.png" alt="Logo da EcoMarinho" class="logo">
             </a>
-            <nav class="nav-menu">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#sobre">Sobre </a></li>
-                    <li><a href="#projetos">Projetos</a></li>
-                    <li><a href="#doacoes">Doações</a></li>
-                    <li><a href="#cadastro">Cadastro</a></li>
-                </ul>
-            </nav>
-        </div>
-        <section class="hero-section">
-            <div class="container hero-content">
-                <img src="/assets/images/projetos/tartaruga1.jpg" alt="tartaruga marinha">
-                <div class="text-content">
-                    <h1>Nossa Missão em Ação.</h1>
-                    <p>
-                        Conheça nossas frentes de atuação e descubra como transformamos doações e voluntariado em resultados concretos para a vida marinha e a saúde dos oceanos.
-                    </p>
-                </div>
-            </div>
-        </section>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="doacoes.html" class="btn">Doações</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="vitrine">
-        <div class="conteiner vitrine">
+    <main>
+        <section class="hero-projects">
+            <div class="hero-content container">
+                <h1>Nossa Missão <br> em Ação</h1>
+                <p>Conheça nossas frentes de atuação e descubra como transformamos doações e voluntariado em resultados concretos para a vida marinha e a saúde dos oceanos.</p>
+            </div>
+        </section>
+
+        <section class="vitrine-section container">
             <h2>Vitrine de Projetos</h2>
-
-            <div class="projeto-costa">
-                <img src="/assets/images/projetos/projeto-costa-limpa.jpg" alt="foto do projeto costa limpa">
-                <h3>Projeto Costa limpa</h3>
-                <p>
-                    Mobilizamos uma força-tarefa de voluntários para realizar mutirões de limpeza em larga escala nas praias, mangues e costas mais críticas do país, transformando áreas poluídas em ecossistemas saudáveis.
-                </p>
-            </div>
-
-            <div class="projeto-guardioes">
-                <img src="/assets/images/projetos/projeto-guardiao-mar.jpg" alt="foto do guardiões do mar">
-                <h3>Projeto Guardões do Mar</h3>
-                <p>
-                    Nossa equipe de resposta rápida e nosso centro de reabilitação atuam 24/7 no resgate, tratamento e devolução de animais marinhos vítimas da poluição e da pesca fantasma.
-                </p>
-            </div>
-
-            <div class="projeto-oceano">
-                <img src="/assets/images/projetos/palestra-escola.jpg" alt="foto de uma palestra em escola">
-                <h3>Projeto Oceano na Escola</h3>
-                <p>
-                    Levamos a educação ambiental para a sala de aula, capacitando a próxima geração de defensores do oceano com conhecimento, materiais didáticos e atividades práticas sobre a importância da conservação.
-                </p>
-            </div>
             
-            <button class="adc-projetos">Adicionar Projetos</button>
-        </div>
-    </section>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <img src="/assets/images/projetos/projeto-costa-limpa.jpg" alt="Foto do projeto costa limpa">
+                    <div class="card-body">
+                        <h3>Projeto Costa Limpa</h3>
+                        <p>Mobilizamos uma força-tarefa de voluntários para realizar mutirões de limpeza em larga escala nas praias, mangues e costas mais críticas do país.</p>
+                        <a href="#" class="card-button">Saiba mais</a>
+                    </div>
+                </div>
 
-    <footer class="roda-pe">
-        <div class="marinho">
+                <div class="project-card">
+                    <img src="/assets/images/projetos/projeto-guardiao-mar.jpg" alt="Foto do guardiões do mar">
+                     <div class="card-body">
+                        <h3>Projeto Guardiões do Mar</h3>
+                        <p>Nossa equipe de resposta rápida e nosso centro de reabilitação atuam 24/7 no resgate, tratamento e devolução de animais marinhos vítimas da poluição.</p>
+                        <a href="#" class="card-button">Saiba mais</a>
+                    </div>
+                </div>
 
-            <div class="logo">
-                <img src="/assets/images/logo.png" alt="logo da eco marine">
+                <div class="project-card">
+                    <img src="/assets/images/projetos/palestra-escola.jpg" alt="Foto de uma palestra em escola">
+                     <div class="card-body">
+                        <h3>Projeto Oceano na Escola</h3>
+                        <p>Levamos a educação ambiental para a sala de aula, capacitando a próxima geração de defensores do oceano com conhecimento e atividades práticas.</p>
+                        <a href="#" class="card-button">Saiba mais</a>
+                    </div>
+                </div>
+
             </div>
-            <a href="#">EcoMarinho</a>
-            <a href="#">Junte-se á maré da Mudança.</a>
-            <a href="#"><img src="/assets/images/icons/facebook.png" alt="logo do facebook"></a>
-            <a href="#"><img src="/assets/images/icons/instagram.png" alt="logo instagram"></a>
-            <a href="#"><img src="/assets/images/icons/youtube.png" alt="logo youtube"></a>
-            <a href="#"><img src="/assets/images/icons/linkedin.png" alt="logo linkedin"></a>
-        </div>
 
-        <div class="participe">
-            <a href="#">Seja Voluntario</a>
-            <a href="#">Empresa Parceira</a>
-            <a href="#">Evento e Multirões</a>
-            <a href="#">Blog e Notícias</a>
-        </div>
+            <button class="btn-dark">Adicionar Projetos</button>
+        </section>
+    </main>
 
-        <div class="sobre-nos">
-            <a href="#">Nossa Missão, Visão e Valores </a>
-            <a href="#">Nossa equipe</a>
-            <a href="#">Transparencia</a>
-            <a href="#">Contato</a>
+    <footer>
+        <div class="footer-container container">
+            <div class="footer-col" id="footer-logo">
+                <img src="/assets/images/logo.png" alt="Logo da EcoMarinho" class="logo">
+                <p>Evoluindo junto com a maré da mudança.</p>
+                </div>
+            <div class="footer-col">
+                <h3>PARTICIPE</h3>
+                <ul>
+                    <li><a href="cadastro.html">Seja voluntário</a></li>
+                    <li><a href="#">Empresas Parceiras</a></li>
+                    <li><a href="#">Eventos e Mutirões</a></li>
+                    <li><a href="blog.html">Blog e Notícias</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>SOBRE NÓS</h3>
+                <ul>
+                    <li><a href="#">Nossa Missão, Visão e Valores</a></li>
+                    <li><a href="#">Nossa equipe</a></li>
+                    <li><a href="#">Transparência</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
         </div>
-
-        <p>© 2025 EcoMarinho | Todos os direitos reservados.CNPJ: XX.XXX.XXX/0001-XX[Política de Privacidade] | [Termos de Uso]+</p>
+        <div class="footer-bottom">
+            <p>© 2025 EcoMarinho | Todos os direitos reservados. | Política de Privacidade | Termos de Uso</p>
+        </div>
     </footer>
 </body>
 </html>

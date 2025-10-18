@@ -1,0 +1,186 @@
+/* --- Seção Hero (Blog) --- */
+/*
+ * Define a aparência da seção de topo com a imagem das arraias.
+ * A estrutura e lógica são as mesmas das outras páginas para manter a consistência.
+*/
+.hero-blog {
+    position: relative;
+    color: var(--light-text);
+    display: flex;
+    align-items: center;
+
+    /* Imagem de fundo das arraias */
+    background-image: url('/assets/images/blog/header.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-blog h1 {
+    color: var(--light-text);
+    margin-top: 6rem;
+}
+
+
+/* Garante que o conteúdo do hero (texto) fique na frente do overlay */
+.hero-blog .container {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* --- Seção de Posts do Blog --- */
+.blog-posts-section {
+    padding: 4rem 0; /* Espaçamento vertical da seção */
+}
+
+/*
+ * O .blog-grid usa CSS Grid para criar o layout de colunas.
+ * É a forma mais moderna e eficiente de criar grades.
+*/
+.blog-grid {
+    display: grid;
+    /* Por padrão (desktop), cria 3 colunas de tamanho igual */
+    grid-template-columns: repeat(3, 1fr);
+    /* Define o espaçamento (gap) entre os cards */
+    gap: 2rem;
+    margin-bottom: 3rem; /* Espaço entre a grade e o botão "Next" */
+}
+
+/*
+ * Estilo de cada card de postagem. A tag <article> é usada por semântica.
+*/
+.post-card {
+    background-color: #F8FAFC; /* Fundo cinza claro para destacar o card */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+    overflow: hidden; /* Garante que a imagem não vaze das bordas arredondadas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave */
+}
+
+/* Efeito de "levantar" o card ao passar o mouse por cima */
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo da imagem do card */
+.card-image-link img {
+    width: 100%;
+    height: 220px; /* Altura fixa para todas as imagens dos cards */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    display: block; /* Remove qualquer espaço extra abaixo da imagem */
+    transition: transform 0.4s ease;
+}
+
+/* Efeito de zoom na imagem ao passar o mouse sobre o card */
+.post-card:hover .card-image-link img {
+    transform: scale(1.05);
+}
+
+/* Container do conteúdo de texto do card */
+.card-content {
+    padding: 1.5rem; /* Espaçamento interno */
+}
+
+/* Seção com a foto e nome do autor */
+.author-info {
+    display: flex; /* Alinha a foto e o nome lado a lado */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 0.75rem; /* Espaço entre a foto e o nome */
+    margin-bottom: 1rem;
+}
+
+/* Foto do autor em formato circular */
+.author-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Deixa a imagem redonda */
+    object-fit: cover;
+}
+
+/* Nome do autor */
+.author-info span {
+    font-weight: bold;
+    color: var(--dark-text);
+}
+
+/* Título da postagem */
+.card-content h3 {
+    margin-bottom: 0.75rem;
+}
+
+.card-content h3 a {
+    color: var(--primary-blue);
+    font-size: 1.25rem;
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+/* Pequeno trecho da postagem */
+.card-content p {
+    color: var(--gray-text);
+    line-height: 1.6;
+}
+
+/* Botão de paginação "Next" */
+.btn-next {
+    display: block; /* Transforma o link em um bloco para poder centralizar com margem */
+    width: fit-content; /* A largura do botão se ajusta ao conteúdo */
+    margin: 0 auto; /* Centraliza o botão na horizontal */
+    padding: 0.8rem 2.5rem;
+    background-color: var(--primary-blue);
+    color: var(--light-text);
+    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-next:hover {
+    background-color: #06182e;
+}
+
+
+/* ==========================================================================
+   RESPONSIVIDADE (Mobile First)
+   ========================================================================== */
+
+/* Base (Mobile: até 767px) */
+@media (max-width: 767px) {
+    /* Em telas pequenas, os posts ficam um abaixo do outro (1 coluna) */
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablet (de 768px até 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* No tablet, usamos um layout de 2 colunas */
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Responsividade do HERO e HEADER (a mesma lógica das outras páginas) */
+.hero-blog { padding: 4rem 0; min-height: auto; text-align: center; }
+.hero-blog::before { background: rgba(10, 34, 64, 0.6); }
+.hero-content h1 { font-size: 2.25rem; }
+
+@media (min-width: 768px) {
+    .hero-blog { text-align: left; }
+    .hero-content { max-width: 70%; }
+}
+
+@media (min-width: 1024px) {
+    .hero-blog {
+        margin-top: -80px; padding-top: 10rem; padding-bottom: 6rem; min-height: 550px;
+    }
+    .hero-blog::before {
+        background: linear-gradient(90deg, rgba(10, 34, 64, 0.7) 0%, rgba(10, 34, 64, 0) 100%);
+    }
+    .hero-content { max-width: 50%; }
+    .hero-content h1 { font-size: 3rem; }
+}

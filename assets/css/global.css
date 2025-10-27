@@ -1,0 +1,263 @@
+/* ==========================================================================
+   CSS GLOBAL ATUALIZADO - EcoMarinho
+   --------------------------------------------------------------------------
+   Este arquivo contém todos os estilos globais e reutilizáveis do site.
+   Ele define a base visual (cores, fontes, layout) e os componentes
+   comuns como o Cabeçalho (Header) e o Rodapé (Footer).
+   
+   Atualizado em: 18 de Outubro de 2025
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+   1. RESET BÁSICO E VARIÁVEIS GLOBAIS (:root)
+   -------------------------------------------------------------------------- */
+
+/* Um reset simples para garantir consistência entre os navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* * :root é onde definimos nossas variáveis CSS (Custom Properties).
+ * Isso nos permite reutilizar cores e outros valores em todo o site,
+ * facilitando a manutenção e a alteração do tema visual.
+*/
+:root {
+    /* Paleta de Cores */
+    --primary-blue: #0A2240;      /* Azul escuro principal, usado em fundos e textos */
+    --secondary-blue: #3B82F6;    /* Azul vibrante, usado em botões e destaques */
+    --dark-text: #1E293B;         /* Cor de texto principal (quase preto) */
+    --light-text: #F8FAFC;        /* Cor de texto para fundos escuros (quase branco) */
+    --gray-text: #64748B;         /* Cinza para textos secundários e parágrafos */
+    --background-light: #FFFFFF;  /* Fundo principal branco */
+    --background-accent: #F1F5F9; /* Fundo cinza claro para destacar seções */
+}
+
+
+/* --------------------------------------------------------------------------
+   2. ESTILOS GERAIS (BODY, TIPOGRAFIA E LINKS)
+   -------------------------------------------------------------------------- */
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Uma fonte limpa e moderna */
+    background-color: var(--background-light);
+    color: var(--dark-text);
+    line-height: 1.6; /* Espaçamento entre linhas para melhor legibilidade */
+}
+
+/* Estilos base para os títulos principais */
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    color: var(--primary-blue);
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.25rem; }
+
+/* Estilo padrão para links */
+a {
+    text-decoration: none; /* Remove o sublinhado padrão */
+    color: inherit;      /* Faz o link herdar a cor do seu elemento pai */
+    transition: color 0.3s ease;
+}
+
+/* Estilo padrão para listas (remove os marcadores) */
+ul {
+    list-style: none;
+}
+
+/* Garante que as imagens sejam responsivas e não quebrem o layout */
+img {
+    max-width: 100%;
+    display: block; /* Remove espaços extras abaixo das imagens */
+}
+
+
+/* --------------------------------------------------------------------------
+   3. CLASSES DE LAYOUT (HELPERS)
+   -------------------------------------------------------------------------- */
+
+/*
+ * A classe .container é usada em quase todas as seções para centralizar
+ * o conteúdo e manter um espaçamento lateral consistente.
+*/
+.container {
+    width: 90%;
+    max-width: 1120px; /* Largura máxima do conteúdo */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* --------------------------------------------------------------------------
+   4. COMPONENTES REUTILIZÁVEIS (HEADER E FOOTER)
+   -------------------------------------------------------------------------- */
+
+/* --- Cabeçalho (Header) --- */
+/* Estilos base do header (ver responsividade no final para as variações) */
+header {
+    color: var(--light-text);
+    padding: 1rem 0;
+    z-index: 1000; /* Garante que o header fique sempre na frente */
+}
+
+header nav {
+    background-color: var(--primary-blue);
+    border-radius: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.logo {
+    max-width: 60px;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+header nav ul a {
+    font-weight: bold;
+}
+
+header nav ul a:hover {
+    color: var(--secondary-blue);
+}
+
+/* Botão de "Doações" no menu */
+.btn {
+    background-color: var(--secondary-blue);
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: bold;
+    color: var(--dark-text); /* Cor escura para melhor contraste com o fundo azul claro */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #2563EB; /* Um tom de azul um pouco mais escuro */
+    color: var(--light-text);
+}
+
+
+/* --- Rodapé (Footer) --- */
+footer {
+    background-color: var(--primary-blue);
+    color: var(--light-text);
+    padding-top: 3rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-bottom: 3rem;
+}
+
+.footer-col {
+    flex: 1;
+}
+
+#footer-logo p {
+    margin-top: 1rem;
+    color: #A0AEC0; /* Um cinza claro para o slogan */
+}
+
+.footer-col h3 {
+    margin-bottom: 1rem;
+    color: var(--light-text);
+}
+
+.footer-col ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-col a {
+    color: #A0AEC0;
+}
+
+.footer-col a:hover {
+    color: var(--light-text);
+}
+
+.footer-bottom {
+    border-top: 1px solid #1E293B; /* Linha sutil de separação */
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.875rem;
+    color: #A0AEC0;
+}
+
+
+/* --------------------------------------------------------------------------
+   5. RESPONSIVIDADE GLOBAL (Mobile First)
+   -------------------------------------------------------------------------- */
+
+/* --- Base (Mobile: até 767px) --- */
+/* Por padrão, o header é sólido e o menu é escondido */
+header {
+    background-color: var(--primary-blue);
+    position: sticky; /* Fica fixo no topo ao rolar */
+    top: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header nav ul {
+    display: none; /* Menu escondido (pronto para um futuro menu hambúrguer) */
+}
+
+.footer-container {
+    flex-direction: column; /* Colunas do rodapé empilhadas */
+    text-align: center;
+}
+
+
+/* --- Tablet (a partir de 768px) --- */
+@media (min-width: 768px) {
+    /* O menu de navegação volta a aparecer */
+    header nav ul {
+        display: flex;
+    }
+
+    /* As colunas do rodapé voltam a ficar lado a lado */
+    .footer-container {
+        flex-direction: row;
+        text-align: left;
+    }
+}
+
+
+/* --- Desktop (a partir de 1024px) --- */
+@media (min-width: 1024px) {
+    /*
+     * Apenas em telas grandes o header se torna transparente e sobreposto.
+     * Esta regra será aplicada nas páginas internas (Projetos, Blog, etc.),
+     * mas não afetará a página inicial se ela não tiver o "margin-top" negativo
+     * na sua seção hero. É uma abordagem robusta.
+    */
+    body:not(.home-page) header { /* Exemplo: adicione a classe .home-page no body da sua index.html se quiser um header diferente nela */
+        background-color: transparent;
+        position: absolute; /* Flutua sobre o conteúdo */
+        top: 0;
+        left: 0;
+        right: 0;
+        box-shadow: none; /* Remove a sombra na versão transparente */
+    }
+
+    /*
+     * este comportamento no desktop, use a regra mais simples abaixo:
+     *
+     * header {
+     * background-color: transparent;
+     * position: absolute;
+     * top: 0; left: 0; right: 0;
+     * box-shadow: none;
+     * }
+    */
+}

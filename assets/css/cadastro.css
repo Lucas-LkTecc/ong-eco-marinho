@@ -1,0 +1,150 @@
+/* --- Seção Hero (Cadastro) --- */
+/* (Estilos do hero permanecem os mesmos da versão anterior) */
+.hero-cadastro {
+    position: relative;
+    color: var(--light-text);
+    display: flex;
+    align-items: center;
+    background-image: url('/assets/images/cadastro/header-cadastro.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.hero-cadastro::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 1;
+}
+.hero-cadastro .container {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* --- Seção do Formulário --- */
+.form-section {
+    padding: 4rem 0;
+}
+
+/* O formulário agora não precisa de fundo, pois o fieldset terá */
+.cadastro-form {
+    max-width: 800px; /* Aumentamos um pouco a largura para o novo form */
+    margin: 0 auto;
+}
+
+/*
+ * NOVO: Estilo para os agrupamentos <fieldset>.
+ * Cria uma "caixa" visual para cada grupo de campos.
+*/
+.cadastro-form fieldset {
+    border: 1px solid #E2E8F0; /* Borda cinza sutil */
+    border-radius: 15px; /* Bordas arredondadas consistentes */
+    padding: 2rem 2.5rem; /* Espaçamento interno */
+    margin-bottom: 2rem; /* Espaço entre os fieldsets */
+    background-color: #F8FAFC; /* Fundo cinza claro */
+}
+
+/*
+ * NOVO: Estilo para a legenda <legend>.
+ * É o título de cada agrupamento.
+*/
+.cadastro-form legend {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-blue);
+    padding: 0 0.5rem; /* Espaçamento para não colar na borda */
+    margin-left: 1rem; /* Alinhamento com os campos */
+}
+
+
+/* Estilos para os campos (permanecem quase os mesmos) */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--dark-text);
+}
+.form-group input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: var(--background-light);
+}
+.form-group input:focus {
+    outline: none;
+    border-color: var(--secondary-blue);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+
+/*
+ * NOVO: Container para os botões.
+ * Usamos flexbox para alinhá-los à direita.
+*/
+.form-buttons {
+    display: flex;
+    justify-content: flex-end; /* Alinha os botões no final (direita) */
+    gap: 1rem; /* Espaço entre os botões */
+    margin-top: 1rem;
+}
+
+/*
+ * NOVO: Estilos para os botões primário e secundário.
+*/
+.btn-primary,
+.btn-secondary {
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Botão principal (Enviar) */
+.btn-primary {
+    background-color: var(--primary-blue);
+    color: var(--light-text);
+}
+.btn-primary:hover {
+    background-color: #06182e;
+}
+
+/* Botão secundário (Limpar) */
+.btn-secondary {
+    background-color: #E2E8F0;
+    color: var(--dark-text);
+}
+.btn-secondary:hover {
+    background-color: #CBD5E1;
+}
+
+
+/* ==========================================================================
+   RESPONSIVIDADE
+   ========================================================================== */
+.hero-cadastro { padding: 4rem 0; min-height: auto; text-align: center; }
+.hero-cadastro::before { background: rgba(10, 34, 64, 0.6); }
+.hero-content h1 { font-size: 2.25rem; }
+
+@media (min-width: 768px) {
+    .hero-cadastro { text-align: left; }
+    .hero-content { max-width: 70%; }
+}
+@media (min-width: 1024px) {
+    .hero-cadastro {
+        margin-top: -80px; padding-top: 10rem; padding-bottom: 6rem; min-height: 550px;
+    }
+    .hero-cadastro::before {
+        background: linear-gradient(90deg, rgba(10, 34, 64, 0.7) 0%, rgba(10, 34, 64, 0) 100%);
+    }
+    .hero-content { max-width: 50%; }
+    .hero-content h1 { font-size: 3rem; }
+}

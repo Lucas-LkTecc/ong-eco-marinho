@@ -1,0 +1,234 @@
+/* --- ESTILOS DA PÁGINA DE PROJETOS --- */
+
+/* --- Seção Hero (Projetos) --- */
+.hero-projects {
+    position: relative;
+    color: var(--light-text);
+    padding: 6rem 0;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    background-image: url('/assets/images/projetos/tartaruga1.jpg'); /* Imagem da tartaruga */
+    background-size: cover;
+    background-position: center;
+    min-height: 550px; /* Altura mínima da seção */
+    margin-top: -145px;
+}
+
+/* Overlay escuro para melhorar a legibilidade do texto */
+.hero-projects::before {
+   content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative; /* Garante que o conteúdo fique acima do overlay */
+    z-index: 2;
+    max-width: 50%; /* Limita a largura do texto */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    margin-left: 50px;
+    
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-left: 50px;
+}
+
+
+/* --- Seção Vitrine de Projetos --- */
+.vitrine-section {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.vitrine-section h2 {
+    color: var(--primary-blue);
+    font-size: 2.25rem;
+    margin-bottom: 3rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.project-card {
+    background-color: var(--secondary-blue);
+    color: var(--light-text);
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo do card em coluna */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.project-card .card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Faz este container ocupar o espaço disponível */
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex-grow: 1; /* Empurra o botão para baixo */
+}
+
+.card-button {
+    background-color: var(--primary-blue);
+    color: var(--light-text);
+    padding: 0.75rem 1rem;
+    border-radius: 50px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 1.5rem; /* Espaçamento entre o texto e o botão */
+    transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: #06182e;
+}
+
+/* Botão "Adicionar Projetos" */
+.btn-dark {
+    background-color: var(--primary-blue);
+    color: var(--light-text);
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-dark:hover {
+    background-color: #06182e;
+}
+
+
+/* ==========================================================================
+   RESPONSIVIDADE - PROJETOS.CSS
+   ========================================================================== */
+
+/* --- Base Styles (Mobile First: para telas até 767px) --- */
+
+/* Hero Section no Mobile */
+.hero-projects {
+    /* Começa normalmente abaixo do header sólido, sem margem negativa */
+    padding: 4rem 0;
+    min-height: auto; /* Altura automática baseada no conteúdo */
+    text-align: center;
+}
+
+.hero-projects::before {
+    /* Overlay mais simples e escuro para garantir contraste no mobile 
+    background: rgba(10, 34, 64, 0.6);*/
+}
+
+.hero-content {
+    max-width: 90%; /* Ocupa quase toda a largura */
+    margin: 0 auto; /* Centraliza */
+}
+
+.hero-content h1 {
+    font-size: 2.25rem; /* Fonte menor para o título */
+    margin-top: 6rem;
+    color: var(--primary-blue);
+}
+
+.hero-content p {
+    font-size: 1rem; /* Fonte menor para o parágrafo */
+}
+
+
+/* Vitrine de Projetos no Mobile */
+.vitrine-section h2 {
+    font-size: 1.75rem;
+}
+
+.projects-grid {
+    grid-template-columns: 1fr; /* UMA coluna para os cards */
+    gap: 1.5rem;
+}
+
+
+/* --- Tablet (a partir de 768px) --- */
+@media (min-width: 768px) {
+    .hero-projects {
+        text-align: left; /* Alinha o texto à esquerda novamente */
+    }
+
+    .hero-content {
+        max-width: 70%;
+        margin: 0; /* Remove a centralização */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr); /* DUAS colunas para os cards */
+    }
+}
+
+
+/* --- Desktop (a partir de 1024px) --- */
+@media (min-width: 1024px) {
+    /* Reintroduzimos o layout sobreposto apenas para telas grandes */
+    .hero-projects {
+        margin-top: -80px; /* Puxa a imagem para cima, por trás do header */
+        padding-top: 10rem; /* Adiciona espaço para o texto não ficar atrás do header */
+        padding-bottom: 6rem;
+        min-height: 550px;
+    }
+    
+    .hero-projects::before {
+        /* Volta o gradiente original 
+        background: linear-gradient(90deg, rgba(10, 34, 64, 0.7) 0%, rgba(10, 34, 64, 0) 100%);*/
+    }
+
+    .hero-content {
+        max-width: 50%; /* Restaura a largura original do texto */
+    }
+
+    .hero-content h1 {
+        font-size: 3rem; /* Restaura o tamanho original da fonte */
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr); /* TRÊS colunas para os cards */
+    }
+}

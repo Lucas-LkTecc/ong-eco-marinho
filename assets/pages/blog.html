@@ -3,183 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+    <link rel="shortcut icon" href="/assets/images/favicon-32x32.png" type="image/x-icon">
+    <title>EcoMarinho - Blog</title>
+
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/blog.css">
 </head>
 <body>
+
     <header>
-        
-        <div class="container">
-            <a href="#" class="logo">
-                <img src="/assets/images/logo.png" alt="Logo da página">
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <img src="/assets/images/logo.png" alt="Logo da página" class="logo">
             </a>
-            <nav class="nav-menu">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#sobre">Sobre </a></li>
-                    <li><a href="#projetos">Projetos</a></li>
-                    <li><a href="#doacoes">Doações</a></li>
-                    <li><a href="#cadastro">Cadastro</a></li>
-                </ul>
-            </nav>
-        </div>
-        <section class="hero-section">
-            <div class="container hero-content">
-                <img src="/assets/images/blog/header.jpg" alt="foto de arraias no oceano">
-                <div class="text-content">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="doacoes.html" class="btn">Doações</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero-blog">
+            <div class="container">
+                <div class="hero-content">
                     <h1>Diário de Bordo da EcoMarinho</h1>
-                    <p>
-                        Mergulhe em nossas histórias. Notícias, conhecimento e bastidores da linha de frente na luta pela conservação dos oceanos.
-                    </p>
+                    <p>Mergulhe em nossas histórias. Notícias, conhecimento e bastidores da linha de frente na luta pela conservação dos oceanos.</p>
                 </div>
             </div>
         </section>
-    </header>
 
-    <section class="blog-section">
+        <section class="blog-posts-section container">
+            
+            <div class="blog-grid">
 
-        <div class="diario-multirao">
-            <div class="diario">
-                <div class="img-projetos">
-                    <img src="/assets/images/blog/diario-multirao.jpg" alt="Foto de um multirão de limpeza na praia">
+                <article class="post-card">
+                    <a href="#" class="card-image-link">
+                        <img src="/assets/images/blog/diario-multirao.jpg" alt="Foto de um multirão de limpeza na praia">
+                    </a>
+                    <div class="card-content">
+                        <div class="author-info">
+                            <img src="/assets/images/icons/perfil-2-M.png" alt="Foto de perfil de Rafael Lima">
+                            <span>Rafael Lima</span>
+                        </div>
+                        <h3><a href="#">Diário de um Mutirão</a></h3>
+                        <p>No último dia 28 de setembro, mais de 80 voluntários se uniram em um grande mutirão de limpeza na Praia do Sol, no Rio de Janeiro...</p>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <a href="#" class="card-image-link">
+                        <img src="/assets/images/blog/resgate-vitoria.jpg" alt="Foto do resgate da tartaruga">
+                    </a>
+                    <div class="card-content">
+                        <div class="author-info">
+                            <img src="/assets/images/icons/perfil-F.png" alt="Foto de perfil de Mariana Costa">
+                            <span>Mariana Costa</span>
+                        </div>
+                        <h3><a href="#">O Resgate de 'Vitória'</a></h3>
+                        <p>“Vitória” é uma tartaruga-marinha que foi encontrada presa em redes de pesca e coberta por resíduos plásticos na costa de Arraial do Cabo (RJ)...</p>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <a href="#" class="card-image-link">
+                        <img src="/assets/images/blog/centro-reabilitação.jpg" alt="Foto da reabilitação de animais resgatados">
+                    </a>
+                    <div class="card-content">
+                        <div class="author-info">
+                            <img src="/assets/images/icons/perfil2-F.png" alt="Foto de perfil de Carla Menezes">
+                            <span>Carla Menezes</span>
+                        </div>
+                        <h3><a href="#">Por Dentro do Nosso Centro de Reabilitação</a></h3>
+                        <p>Localizado às margens da costa, o Centro de Reabilitação é um espaço dedicado a devolver a saúde e a liberdade aos animais marinhos...</p>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <a href="#" class="card-image-link">
+                        <img src="/assets/images/blog/redes-fantasmas.jpg" alt="Foto de redes fantasmas">
+                    </a>
+                    <div class="card-content">
+                        <div class="author-info">
+                            <img src="/assets/images/icons/perfil-M.png" alt="Foto de perfil de João Ferreira">
+                            <span>João Ferreira</span>
+                        </div>
+                        <h3><a href="#">Redes Fantasmas</a></h3>
+                        <p>Chamadas de “redes fantasmas”, essas são redes de pesca abandonadas ou perdidas no mar que continuam capturando a vida marinha...</p>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <a href="#" class="card-image-link">
+                        <img src="/assets/images/blog/5vilões-plasticos.jpg" alt="Foto da natureza cheia de plastico">
+                    </a>
+                    <div class="card-content">
+                        <div class="author-info">
+                            <img src="/assets/images/icons/equipe-vida.png" alt="Foto de perfil da Equipe">
+                            <span>Equipe Vida Sustentável</span>
+                        </div>
+                        <h3><a href="#">Os 5 Vilões Plásticos que Você Pode Eliminar do seu Dia a Dia</a></h3>
+                        <p>Você sabia que pequenos hábitos diários podem causar um grande impacto nos oceanos? Muitos dos plásticos que usamos por poucos minutos...</p>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <a href="#" class="card-image-link">
+                        <img src="/assets/images/blog/parceria-firmada.jpg" alt="Foto de duas mãos se cumprimentando">
+                    </a>
+                    <div class="card-content">
+                        <div class="author-info">
+                            <img src="/assets/images/icons/projeto-vida.png" alt="Foto de perfil do Projeto">
+                            <span>Projeto Vida Sustentável</span>
+                        </div>
+                        <h3><a href="#">Parceria Firmada</a></h3>
+                        <p>Temos uma nova razão para celebrar! O projeto Vida Sustentável acaba de firmar uma parceria com a ONG EducaMais, unindo forças...</p>
+                    </div>
+                </article>
+                
+            </div> <a href="#" class="btn-next">Next <img src="/assets/images/icons/arrow.png" alt="Seta para a próxima página"></a>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container container">
+            <div class="footer-col" id="footer-logo">
+                <img src="/assets/images/logo.png" alt="Logo da EcoMarinho" class="logo">
+                <p>Evoluindo junto com a maré da mudança.</p>
                 </div>
-                <div class="perfil">
-                    <img src="/assets/images/icons/perfil-2-M.png" alt="Foto de perfil">
-                    <p>Rafael Lima</p>
-                </div>
-                <h3>Diário de um Mutirão</h3>
-                <p>No último dia 28 de setembro, mais de 80 voluntários se uniram em um grande mutirão de limpeza na Praia do Sol, no Rio de Janeiro. Em poucas horas, foram recolhidos 1.420 kg de resíduos, entre plásticos, vidros e papel.</p>
+            <div class="footer-col">
+                <h3>PARTICIPE</h3>
+                <ul>
+                    <li><a href="cadastro.html">Seja voluntário</a></li>
+                    <li><a href="#">Empresas Parceiras</a></li>
+                    <li><a href="#">Eventos e Mutirões</a></li>
+                    <li><a href="blog.html">Blog e Notícias</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>SOBRE NÓS</h3>
+                <ul>
+                    <li><a href="#">Nossa Missão, Visão e Valores</a></li>
+                    <li><a href="#">Nossa equipe</a></li>
+                    <li><a href="#">Transparência</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
             </div>
         </div>
-
-        <div class="resgate-vitoria">
-            <div class="resgate">
-                <div class="img-projetos">
-                    <img src="/assets/images/blog/resgate-vitoria.jpg" alt="Foto do resgate da tartaruga">
-                </div>
-                <div class="perfil">
-                    <img src="/assets/images/icons/perfil-F.png" alt="Foto de perfil">
-                    <p>Mariana Costa</p>
-                </div>
-                <h3>O Resgate de 'Vitória'</h3>
-                <p>
-                    “Vitória” é uma tartaruga-marinha que foi encontrada presa em redes de pesca e coberta por resíduos plásticos na costa de Arraial do Cabo (RJ). Desidratada e com ferimentos nas nadadeiras, ela foi resgatada por voluntários do projeto Vida Sustentável, que atuam na proteção da fauna marinha.
-                </p>
-            </div>
+        <div class="footer-bottom">
+            <p>© 2025 EcoMarinho | Todos os direitos reservados. | Política de Privacidade | Termos de Uso</p>
         </div>
-
-        <div class="centro-reabilitaacao">
-            <div class="reabilitacao">
-                <div class="img-projetos">
-                    <img src="/assets/images/blog/centro-reabilitação.jpg" alt="Foto da reabilitação de animais resgatados">
-                </div>
-                <div class="perfil">
-                    <img src="/assets/images/icons/perfil2-F.png" alt="Foto de perfil">
-                    <p>Carla Menezes</p>
-                </div>
-                <h3>Por Dentro do Nosso Centro de Reabilitação</h3>
-                <p>
-                    Localizado às margens da costa, o Centro de Reabilitação Vida Sustentável é um espaço dedicado a devolver a saúde e a liberdade aos animais marinhos vítimas da poluição e da pesca irregular.
-                </p>
-            </div>
-        </div>
-
-        <div class="redes-fantasmas">
-            <div class="redes">
-                <div class="img-projetos">
-                    <img src="/assets/images/blog/redes-fantasmas.jpg" alt="Foto de redes fantasmas">
-                </div>
-                <div class="perfil">
-                    <img src="/assets/images/icons/perfil-M.png" alt="Foto de perfil">
-                    <p>João Ferreira</p>
-                </div>
-                <h3>Redes Fantasmas</h3>
-                <p>
-                    Chamadas de “redes fantasmas”, essas são redes de pesca abandonadas ou perdidas no mar que continuam capturando e ferindo a vida marinha por meses — às vezes, até anos. Tartarugas, golfinhos e peixes ficam presos nelas, muitas vezes sem chance de escapar.
-                </p>
-            </div>
-        </div>
-
-        <div class="vida-sustentavel">
-            <div class="sustentavel">
-                <div class="img-projetos">
-                    <img src="/assets/images/blog/redes-fantasmas.jpg" alt="Foto de redes fantasmas">
-                </div>
-                <div class="perfil">
-                    <img src="/assets/images/icons/perfil-M.png" alt="Foto de perfil">
-                    <p>João Ferreira</p>
-                </div>
-                <h3>Redes Fantasmas</h3>
-                <p>
-                    Chamadas de “redes fantasmas”, essas são redes de pesca abandonadas ou perdidas no mar que continuam capturando e ferindo a vida marinha por meses — às vezes, até anos. Tartarugas, golfinhos e peixes ficam presos nelas, muitas vezes sem chance de escapar.
-                </p>
-            </div>
-        </div>
-
-        <div class="equipe-vida">
-            <div class="vida">
-                <div class="img-projetos">
-                    <img src="/assets/images/blog/5vilões-plasticos.jpg" alt="Foto da natureza cheia de plastico">
-                </div>
-                <div class="perfil">
-                    <img src="/assets/images/icons/equipe-vida.png" alt="Foto de perfil">
-                    <p>Equipe Vida Sustentável</p>
-                </div>
-                <h3>Os 5 Vilões Plásticos que Você Pode Eliminar do seu Dia a Dia</h3>
-                <p>
-                    Você sabia que pequenos hábitos diários podem causar um grande impacto nos oceanos? Muitos dos plásticos que usamos por poucos minutos permanecem na natureza por centenas de anos, colocando em risco a vida marinha e a nossa própria saúde.
-                </p>
-            </div>
-        </div>
-
-        <div class="vida-sustentavel">
-            <div class="sustentavel">
-                <div class="img-projetos">
-                    <img src="/assets/images/blog/parceria-firmada.jpg" alt="Foto de duas mãos se comprimentando">
-                </div>
-                <div class="perfil">
-                    <img src="/assets/images/icons/projeto-vida.png" alt="Foto de perfil">
-                    <p>Projeto Vida Sustentável</p>
-                </div>
-                <h3>Parceria Firmada</h3>
-                <p>
-                    Temos uma nova razão para celebrar! O projeto Vida Sustentável acaba de firmar uma parceria com a ONG EducaMais, unindo forças em prol da preservação dos oceanos e da educação ambiental.
-                </p>
-            </div>
-        </div>
-
-        <butto class="next"><a href="#">Next <img src="/assets/images/icons/arrow.png" alt="Botão para a proxima página"></a></button>
-    </section>
-
-    <footer class="roda-pe">
-        <div class="marinho">
-
-            <div class="logo">
-                <img src="/assets/images/logo.png" alt="logo da eco marine">
-            </div>
-            <a href="#">EcoMarinho</a>
-            <a href="#">Junte-se á maré da Mudança.</a>
-            <a href="#"><img src="/assets/images/icons/facebook.png" alt="logo do facebook"></a>
-            <a href="#"><img src="/assets/images/icons/instagram.png" alt="logo instagram"></a>
-            <a href="#"><img src="/assets/images/icons/youtube.png" alt="logo youtube"></a>
-            <a href="#"><img src="/assets/images/icons/linkedin.png" alt="logo linkedin"></a>
-        </div>
-
-        <div class="participe">
-            <a href="#">Seja Voluntario</a>
-            <a href="#">Empresa Parceira</a>
-            <a href="#">Evento e Multirões</a>
-            <a href="#">Blog e Notícias</a>
-        </div>
-
-        <div class="sobre-nos">
-            <a href="#">Nossa Missão, Visão e Valores </a>
-            <a href="#">Nossa equipe</a>
-            <a href="#">Transparencia</a>
-            <a href="#">Contato</a>
-        </div>
-
-        <p>© 2025 EcoMarinho | Todos os direitos reservados.CNPJ: XX.XXX.XXX/0001-XX[Política de Privacidade] | [Termos de Uso]+</p>
     </footer>
 
 </body>

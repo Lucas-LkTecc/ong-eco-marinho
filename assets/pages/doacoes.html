@@ -1,119 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="pt-br">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doação</title>
+    <link rel="shortcut icon" href="/assets/images/favicon-32x32.png" type="image/x-icon">
+    <title>EcoMarinho - Faça uma Doação</title>
+
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/doacoes.css">
 </head>
 <body>
+
     <header>
-        <div class="container">
-            <a href="#" class="logo">
-                <img src="/assets/images/logo.png" alt="Logo da página">
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <img src="/assets/images/logo.png" alt="Logo da página" class="logo">
             </a>
-            <nav class="nav-menu">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#sobre">Sobre </a></li>
-                    <li><a href="#projetos">Projetos</a></li>
-                    <li><a href="#doacoes">Doações</a></li>
-                    <li><a href="#cadastro">Cadastro</a></li>
-                </ul>
-            </nav>
-        </div>
-        <section class="hero-section">
-            <div class="container hero-content">
-                <img src="/assets/images/blog/header.jpg" alt="foto de arraias no oceano">
-                <div class="text-content">
-                    <h1>Sua doação 
-                        transforma o oceano.
-                    </h1>
-                    <p>
-                       Cada real doado é investido diretamente em nossos projetos de limpeza, resgate de animais e educação. Faça parte da solução e ajude-nos a proteger a vida marinha.
-                    </p>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="doacoes.html" class="btn">Doações</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero-donations">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Sua doação transforma o oceano.</h1>
+                    <p>Cada real doado é investido diretamente em nossos projetos de limpeza, resgate de animais e educação. Faça parte da solução e ajude-nos a proteger a vida marinha.</p>
                 </div>
             </div>
         </section>
-    </header>
 
-    <section class="escolha-doar">
-        <div>
-            <button><a href="#">Doação Única <img src="/assets/images/icons/arrow.png" alt="botão de doação"></a></button>
+        <div class="donation-container container">
 
-            <button><a href="#">Doação Mensal (Seja um Guardião!)</a></button>
+            <section class="donation-choice">
+                <div class="choice-buttons">
+                    <a href="#" class="btn-choice active">Doação Única <img src="/assets/images/icons/arrow.png" alt="ícone de link externo"></a>
+                    <a href="#" class="btn-choice">Doação Mensal (Seja um Guardião!)</a>
+                </div>
+                <p>Ao se tornar um(a) Guardião(ã) do Mar, você nos dá a previsibilidade necessária para planejar resgates e expedições de limpeza a longo prazo. É a forma de maior impacto!</p>
+            </section>
 
-            <p>
-                Ao se tornar um(a) Guardião(ã) do Mar, você nos dá a previsibilidade necessária para planejar resgates e expedições de limpeza a longo prazo. É a forma de maior impacto!
-            </p>
-        </div>
-    </section>
+            <section class="value-selection">
+                <h2>Escolha o valor do seu impacto</h2>
+                <div class="value-grid">
+                    <button class="value-btn">R$ 30</button>
+                    <button class="value-btn active">R$ 60</button> <button class="value-btn">R$ 120</button>
+                    <button class="value-btn">Outro valor</button>
+                </div>
+            </section>
 
-    <section class="doacao">
-        <h2>Escolha o valor do seu impacto</h2>
-
-        <button class="valores">R$ 30</button>
-        <button class="valores">R$ 60</button>
-        <button class="valores">R$ 120</button>
-        <button class="valores">Outros valores</button>
-
-        <form action="processa_formulario.js" method="post">
-            <!-- Campo de texto -->
-            <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nome" placeholder="Digite seu nome: " required>
-
-            <!-- Campo de e-mail -->
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="Digite seu E-mail" required>
-
-            <!-- Campo para CPF/CNPJ -->
-            <label for="cpfCnpj">CPF ou CNPJ:</label>
-            <input type="text" name="cpfCnpj" id="cpfCnpj" placeholder="Digite seu CPF ou CNPJ: ">
-
-            <!-- Opções de forma de pagamento -->
-            <label for="pagamento">Formas de Pagamento</label>
-            <select name="pagamento" id="pagamento">
-                <option value="">Selecione</option>
-                <option value="pix">Pix</option>
-                <option value="Cartao">Cartão de crédito</option>
-                <option value="boleto">Boleto</option>
-            </select>
+            <form class="donation-form" action="#" method="post">
                 
-            <!-- Botões -->
-            <button type="submit">Concluir Doação</button>
-            <button type="reset">Limpar formulario</button>
-        </form>
-    </section>
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                </div>
 
-    <footer class="roda-pe">
-        <div class="marinho">
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Informe seu e-mail" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cpfCnpj">CPF/CNPJ</label>
+                    <input type="text" id="cpfCnpj" name="cpfCnpj" placeholder="Digite seu CPF ou CNPJ">
+                </div>
 
-            <div class="logo">
-                <img src="/assets/images/logo.png" alt="logo da eco marine">
+                <div class="payment-methods">
+                    <h3>Forma de Pagamento</h3>
+                    <div class="payment-logos">
+                        <img src="/assets/images/doacao/formas-de-pagamento.png" alt="Logos de pagamento">
+                        <img src="/assets/images/doacao/Selo-SSL.png" alt="selo de segurança">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit">Concluir Doação</button>
+
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container container">
+            <div class="footer-col" id="footer-logo">
+                <img src="/assets/images/logo.png" alt="Logo da EcoMarinho" class="logo">
+                <p>Evoluindo junto com a maré da mudança.</p>
+                </div>
+            <div class="footer-col">
+                <h3>PARTICIPE</h3>
+                <ul>
+                    <li><a href="cadastro.html">Seja voluntário</a></li>
+                    <li><a href="#">Empresas Parceiras</a></li>
+                    <li><a href="#">Eventos e Mutirões</a></li>
+                    <li><a href="blog.html">Blog e Notícias</a></li>
+                </ul>
             </div>
-            <a href="#">EcoMarinho</a>
-            <a href="#">Junte-se á maré da Mudança.</a>
-            <a href="#"><img src="/assets/images/icons/facebook.png" alt="logo do facebook"></a>
-            <a href="#"><img src="/assets/images/icons/instagram.png" alt="logo instagram"></a>
-            <a href="#"><img src="/assets/images/icons/youtube.png" alt="logo youtube"></a>
-            <a href="#"><img src="/assets/images/icons/linkedin.png" alt="logo linkedin"></a>
+            <div class="footer-col">
+                <h3>SOBRE NÓS</h3>
+                <ul>
+                    <li><a href="#">Nossa Missão, Visão e Valores</a></li>
+                    <li><a href="#">Nossa equipe</a></li>
+                    <li><a href="#">Transparência</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
         </div>
-
-        <div class="participe">
-            <a href="#">Seja Voluntario</a>
-            <a href="#">Empresa Parceira</a>
-            <a href="#">Evento e Multirões</a>
-            <a href="#">Blog e Notícias</a>
+        <div class="footer-bottom">
+            <p>© 2025 EcoMarinho | Todos os direitos reservados. | Política de Privacidade | Termos de Uso</p>
         </div>
-
-        <div class="sobre-nos">
-            <a href="#">Nossa Missão, Visão e Valores </a>
-            <a href="#">Nossa equipe</a>
-            <a href="#">Transparencia</a>
-            <a href="#">Contato</a>
-        </div>
-
-        <p>© 2025 EcoMarinho | Todos os direitos reservados.CNPJ: XX.XXX.XXX/0001-XX[Política de Privacidade] | [Termos de Uso]+</p>
     </footer>
 </body>
 </html>
